@@ -1,0 +1,12 @@
+{{ config(
+    MATERIALIZED='table',
+    SCHEMA='marts',
+    database='analytics'
+)}}
+
+SELECT
+    transaction_date,
+    sum(amount) AS total_revenue,
+    count(distinct customer_id) as unique_customers
+from {{ ref('stg_transactions') }}
+group by transaction_date
