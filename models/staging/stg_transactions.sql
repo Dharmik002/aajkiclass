@@ -1,7 +1,7 @@
 {{ config(
     materialized='table',
-    schema='marts'
-    -- database='analytics'
+    schema='marts',
+    database='analytics'
 )}}
 
 SELECT 
