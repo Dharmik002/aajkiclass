@@ -1,6 +1,6 @@
 {{ config(
-    MATERIALIZED='table',
-    SCHEMA='marts',
+    materialized='table',
+    schema='marts',
     database='analytics'
 )}}
 
